@@ -1,0 +1,72 @@
+.tharo {
+    &-container {
+        font-family: sans-serif;
+        width: 100%;
+        max-width: 1225px;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 50px;
+        }
+
+        @media screen and (max-width: 520px) {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 50px;
+        }
+    }
+
+    &-item {
+        flex-grow: 1;
+        background-color: #a80a0a;
+        color: white;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        p {
+            text-align: justify;
+            margin-top: 36px;
+        }
+
+        &__icon {
+            margin-bottom: -56px;
+            width: 60px;
+            height: 60px;
+            border-radius: 999999px;
+            border: 5px solid white;
+            background-color: #07002e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
